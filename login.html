@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="style.css"> <!-- Link to the shared stylesheet -->
+</head>
+<body class="gradient-background">
+<body>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #b7754f;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .login-container {
+            background-color: #fbccb0;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            text-align: center;
+        }
+        .login-container h2 {
+            margin-bottom: 20px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            font-weight: bold;
+            margin-bottom: 5px;
+            display: block;
+        }
+        .form-group input {
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+        .form-group button {
+            background-color: #73603e;
+            color: #fff;
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .toggle-button {
+            background-color: #73603e;
+            color: #fff;
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <h2>Login</h2>
+        <form class="login-form" onsubmit="return loginUser()">
+            <div class="form-group">
+                <label for="loginUsername">Username:</label>
+                <input type="text" id="loginUsername" name="loginUsername" required>
+            </div>
+            <div class="form-group">
+                <label for="loginPassword">Password:</label>
+                <input type="password" id="loginPassword" name="loginPassword" required>
+            </div>
+            <div class="form-group">
+                <button type="submit">Login</button>
+            </div>
+        </form>
+
+        <h2>OR</h2>
+
+        <h2>Sign-up</h2>
+        <form class="signup-form" onsubmit="return signupUser()" style="display: none;">
+            <div class="form-group">
+                <label for="signupUsername">Username:</label>
+                <input type="text" id="signupUsername" name="signupUsername" required>
+            </div>
+            <div class="form-group">
+                <label for="signupPassword">Password:</label>
+                <input type="password" id="signupPassword" name="signupPassword" required>
+            </div>
+            <div class="form-group">
+                <button type="submit">Sign Up</button>
+            </div>
+        </form>
+
+        <button class="toggle-button" onclick="toggleForm()">Switch to Sign-up</button>
+
+        <script>
+            function loginUser() {
+                var username = document.getElementById('loginUsername').value;
+                var password = document.getElementById('loginPassword').value;
+
+                if (username === 'user' && password === 'pass') {
+                    alert('Login successful!');
+                    window.location.href = 'index.html';
+                } else {
+                    alert('Invalid username or password');
+                    return false;
+                }
+            }
+
+            function signupUser() {
+                var username = document.getElementById('signupUsername').value;
+                var password = document.getElementById('signupPassword').value;
+
+                // Perform user registration logic here (replace with actual server-side code)
+                // For simplicity, we just show an alert indicating successful registration
+                alert('User registered successfully!');
+                window.location.href = 'index.html';
+                return false;
+            }
+
+            function toggleForm() {
+                var loginForm = document.querySelector('.login-form');
+                var signupForm = document.querySelector('.signup-form');
+
+                if (loginForm.style.display === 'none') {
+                    loginForm.style.display = 'block';
+                    signupForm.style.display = 'none';
+                } else {
+                    loginForm.style.display = 'none';
+                    signupForm.style.display = 'block';
+                }
+            }
+        </script>
+    </div>
+</body>
+</html>
