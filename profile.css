@@ -1,0 +1,33 @@
+/* profile.css */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.profile-container {
+    display: flex;
+    height: 100vh;
+}
+
+.circle {
+    background: #08395a; /* Color for the circle */
+    width: 300px;
+    height: 300px;
+    border-radius: 50%; /* Create a circle */
+    border: 2px solid #000000; /* Thin border around the circle */
+}
+
+.large-box {
+    background: #503d3d;
+    flex: 1;
+    padding: 20px;
+}
+
+.large-box h2 {
+    color: #388725; /* Match the circle color or choose a different one */
+}
+
+.large-box p {
+    color: #333; /* Text color for the large box */
+    margin-top: 10px;
+}

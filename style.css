@@ -1,42 +1,56 @@
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    overflow: hidden; /* Prevents scroll bars caused by the gradient overflow */
 }
 
 .gradient-background {
-    background: linear-gradient(to bottom, #ffddb3, #502c2c); /* Background gradient using two colors */
-    color: #fff; /* Text color */
+    background: linear-gradient(to bottom, #ffddb3, #502c2c);
+    color: #fff;
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 100vh;
     text-align: center;
-    padding-top: 40vh; /* Adjust as needed */
-    animation: fadeIn 1s ease-in-out; /* Fade-in animation */
 }
 
-.center-text {
+.window-container {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-    text-align: center;
 }
 
-.gradient-background h1 {
-    align-self: center;
-    opacity: 0; /* Set initial opacity to 0 for fade-in effect */
+.side-window {
+    background: #333;
+    color: #fff;
+    padding: 20px;
+    width: 200px;
+    height: 100vh;
 }
 
-/* Keyframes for the fadeIn animation */
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
+.side-window h2 {
+    border-bottom: 2px solid #fff;
+    padding-bottom: 10px;
+}
+
+.side-window ul {
+    list-style: none;
+    padding: 0;
+}
+
+.side-window li {
+    margin-bottom: 10px;
+}
+
+.side-window a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.side-window a:hover {
+    color: #ffddb3;
+}
+
+.main-content {
+    flex: 1;
+    padding: 20px;
 }

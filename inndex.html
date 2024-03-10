@@ -15,7 +15,7 @@
           flex-direction: column;
           justify-content: center;
           align-items: center;
-          height: 100vh;
+          height: 10vh;
           overflow: hidden; /* Prevents scroll bars caused by the gradient overflow */
       }
       h1, p {
@@ -23,18 +23,33 @@
       }
   </style>
   </head>
+
   <body class="gradient-background">
+
+    <div class="window-container">
+
+        <div class="side-window">
+            <h2>Features</h2>
+            <ul>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="login.html">Sign Up</a></li>
+                <li><a href="profile.html">Profile</a></li>
+                <li><a href="messages.html">Messages</a></li>
+                <li><a href="help.html">Help</a></li>
+            </ul>
+        </div>
+
   <body>
+    <div class="main-content">
     <h1>Welcome To SkillSwapHub</h1>
     <h2>What is SkillSwapHub?</h2>
     <p>
-      SkillSwapHub is a platform for individuals like you, who are searching for
+      <strong>SkillSwapHub is a platform for individuals like you, who are searching for
       different people around the world to connect, and share your skills with
-      eachother.
+      eachother.</strong>
     </p>
     <br>
-    <p>Click the button below to go to the login page:</p>
-    <button onclick="openLoginPage()">Go to Login Page</button>
+</div>
 
     <script>
         function openLoginPage() {
